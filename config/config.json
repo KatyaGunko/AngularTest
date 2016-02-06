@@ -1,0 +1,92 @@
+{
+  "port": 3000,
+  "mongoose": {
+    "uri": "mongodb://localhost/AngularTest",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "AngularTest_secret_key",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "validation": {
+
+    "user": {
+      "firstName": {
+        "regexp": "^[A-Za-zА-Яа-я-\\s']+$",
+        "minLength": "3",
+        "maxLength": "30"
+      },
+      "lastName": {
+        "regexp": "^[A-Za-zА-Яа-я-\\s']+$",
+        "minLength": "3",
+        "maxLength": "30"
+      },
+      "email": {
+        "regexp": "^[A-Za-z][A-Za-z0-9._]{1,20}[A-Za-z0-9]@[a-z]+\\.[a-z.]{2,5}$"
+      },
+      "number": {
+        "regexp": "^[0-9-\\s]+$",
+        "minLength": "3",
+        "maxLength": "30"
+      }
+    },
+
+    "item" : {
+      "name" : {
+        "regexp": "^[0-9A-Za-zА-Яа-я-@#'*\\s]+$",
+        "minLength": "3",
+        "maxLength": "30"
+      },
+      "description" : {
+        "regexp": "^([^\\<\\>])*$"
+      },
+      "quantity" : {
+        "regexp": "^[1-9][0-9]*$"
+      }
+    },
+
+    "category": {
+      "name": {
+        "regexp": "^[A-Za-zА-Яа-я0-9*&@'\\-\\s]+$",
+        "minLength": "3",
+        "maxLength": "70"
+      },
+      "description": {
+        "regexp": "^([^\\<\\>])*$"
+      }
+    },
+
+    "location": {
+      "name": {
+        "regexp": "^[A-Za-zА-Яа-я0-9*&@'\\-\\s]+$",
+        "minLength": "3",
+        "maxLength": "70"
+      },
+      "description": {
+        "regexp": "^([^\\<\\>])*$"
+      }
+    },
+
+    "transaction" : {
+      "reference" : {
+        "regexp": "^[0-9A-Za-zА-Яа-я-@#'*\\s]+$",
+        "minLength": "0",
+        "maxLength": "300"
+      },
+      "description" : {
+        "regexp": "^([^\\<\\>])*$"
+      }
+    }
+  }
+}

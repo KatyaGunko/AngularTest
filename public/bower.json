@@ -1,0 +1,9 @@
+{
+  "name": "AngularTest",
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-resource": "1.4.8",
+    "angular-messages": "1.4.8",
+    "angular-material": "~1.0.5"
+  }
+}
